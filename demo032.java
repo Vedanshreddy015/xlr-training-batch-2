@@ -7,7 +7,7 @@ class HashSetDemo2 {
 // not guarantee of the 
 //order in which the elements are added...
     void HashsetMethod(){
-        HashSet <String>hashSet = new HashSet<String>();
+        HashSet <String>hashSet = new HashSet<>();
 		hashSet.add("INDIA");
 		hashSet.add("AUSTRALIA");
 		hashSet.add("BANGLADESH");
