@@ -1,8 +1,29 @@
 public class Demo061 {
-    public static void main(String[] args){
-        int[] arr = {1,2,3,4,5};
-        System.out.println(arr[0]);
-        System.out.println(arr[1]);
-        System.out.println(arr.length-1);
+    public static void main(String[] args) {
+        int count = 0; 
+        int number = 2; 
+
+        System.out.println("The first 10 prime numbers are:");
+
+        while (count < 10) {
+            if (isPrime(number)) {
+                System.out.print(number + " "); 
+                count++; 
+            }
+            number++; 
+        }
+    }
+
+
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false; 
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false; 
+            }
+        }
+        return true; 
     }
 }
