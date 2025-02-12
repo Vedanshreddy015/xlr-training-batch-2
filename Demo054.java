@@ -1,6 +1,6 @@
 class Customer {
-    private String name;
-    private int age;
+    private final String name;
+    private final int age;
 
     public Customer(String name, int age) {
         this.name = name;
@@ -20,8 +20,8 @@ class Customer {
 }
 
 class Order {
-    private int orderId;
-    private String product;
+    private final int orderId;
+    private final String product;
 
     public Order(int orderId, String product) {
         this.orderId = orderId;

@@ -2,16 +2,14 @@ import java.util.Scanner;
 
 public class Demo047 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.print("Enter a number: ");
-        long number = scanner.nextLong(); 
-        
-        int digitCount = countDigits(number);
-        
-        System.out.println("The number of digits in " + number + " is: " + digitCount);
-        
-        scanner.close();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter a number: ");
+            long number = scanner.nextLong();
+            
+            int digitCount = countDigits(number);
+            
+            System.out.println("The number of digits in " + number + " is: " + digitCount);
+        }
     }
 
     public static int countDigits(long number) {
